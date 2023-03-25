@@ -14,6 +14,7 @@ class MessagesTest < ApplicationSystemTestCase
     visit messages_url
     click_on "New message"
 
+    fill_in "Greeting", with: @message.greeting
     click_on "Create Message"
 
     assert_text "Message was successfully created"
@@ -24,6 +25,7 @@ class MessagesTest < ApplicationSystemTestCase
     visit message_url(@message)
     click_on "Edit this message", match: :first
 
+    fill_in "Greeting", with: @message.greeting
     click_on "Update Message"
 
     assert_text "Message was successfully updated"

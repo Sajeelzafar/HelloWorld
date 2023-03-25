@@ -12,6 +12,11 @@
   <% end %>
 
   <div>
+    <%= form.label :greeting, style: "display: block" %>
+    <%= form.text_field :greeting %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
